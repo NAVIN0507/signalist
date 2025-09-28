@@ -3,7 +3,7 @@ import React from 'react'
 
 const page = () => {
   return (  
-    <div className='flex justify-center items-center h-screen'>
+    <div className='flex  min-h-screen home-wrapper'>
       <Button>Click Me</Button>
     </div>
   )
