@@ -1,10 +1,20 @@
+import TradingViewWidgets from '@/components/TradingViewWidgets'
 import { Button } from '@/components/ui/button'
+import { MARKET_OVERVIEW_WIDGET_CONFIG } from '@/lib/constants'
 import React from 'react'
 
 const page = () => {
   return (  
     <div className='flex  min-h-screen home-wrapper'>
-      <Button>Click Me</Button>
+      <section className='grid w-full gap-8 home-section'>
+        <div className='md:col-span-1 xl:col-span-1'>
+          <TradingViewWidgets 
+          title='Market Overview'
+          scriptUrl='https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js'
+         config={MARKET_OVERVIEW_WIDGET_CONFIG}
+          />
+        </div>
+      </section>
     </div>
   )
 }
